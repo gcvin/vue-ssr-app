@@ -1,3 +1,6 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  configureWebpack: config => {
+    config.entry = './src/entry-client'
+  }
 }
