@@ -24,6 +24,7 @@
     "@vue/eslint-config-standard": "^3.0.3",
     "axios": "^0.18.0",
     "chokidar": "^2.0.4",
+    "clean-webpack-plugin": "^0.1.19",
     "compression": "^1.7.3",
     "cross-env": "^5.2.0",
     "express": "^4.16.3",

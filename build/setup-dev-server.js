@@ -2,7 +2,7 @@
 * @Author: zhanglin
 * @Date:   2018-09-25 14:30:28
 * @Last Modified by:   zhanglin
-* @Last Modified time: 2018-09-25 15:01:28
+* @Last Modified time: 2018-09-26 10:59:13
 */
 const fs = require('fs')
 const path = require('path')
@@ -44,12 +44,8 @@ module.exports = function setupDevServer (app, templatePath, cb) {
   })
 
   // modify client config to work with hot middleware
+
   clientConfig.entry.main = ['webpack-hot-middleware/client', clientConfig.entry.main]
-  clientConfig.output.filename = '[name].js'
-  clientConfig.plugins.push(
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
-  )
 
   // dev middleware
   const clientCompiler = webpack(clientConfig)
